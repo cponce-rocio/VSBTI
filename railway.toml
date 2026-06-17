@@ -1,0 +1,8 @@
+[build]
+builder = "nixpacks"
+buildCommand = "cd vsbti/backend/VsbtiApi && dotnet restore && dotnet publish -c Release -o out"
+
+[deploy]
+startCommand = "cd vsbti/backend/VsbtiApi/out && dotnet VsbtiApi.dll --urls=http://0.0.0.0:${PORT:-8080}"
+healthcheckPath = "/swagger"
+healthcheckTimeout = 100

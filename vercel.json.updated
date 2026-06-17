@@ -1,0 +1,10 @@
+[
+  {
+    "src": "vsbti/frontend/dist/(.*)",
+    "dest": "vsbti/frontend/dist/$1"
+  },
+  {
+    "src": "/(.*)",
+    "dest": "vsbti/frontend/dist/index.html"
+  }
+]

@@ -8,6 +8,12 @@ backend/**/bin/
 backend/**/.vs/
 backend/**/*.user
 backend/**/*.suo
+backend/**/*.db
+backend/**/*.db-shm
+backend/**/*.db-wal
+vsbti/backend/**/*.db
+vsbti/backend/**/*.db-shm
+vsbti/backend/**/*.db-wal
 
 # Frontend
 frontend/node_modules/
@@ -15,6 +21,14 @@ frontend/dist/
 frontend/.vite/
 frontend/.env.local
 frontend/.env.*.local
+vsbti/frontend/node_modules/
+vsbti/frontend/dist/
+vsbti/frontend/.vite/
+
+# Database
+*.db
+*.db-shm
+*.db-wal
 
 # OS
 .DS_Store
@@ -26,3 +40,12 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# Vercel
+.vercel
+
+# Environment
+.env
+.env.local
+.env.*.local
+

@@ -24,13 +24,26 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy(FrontendCorsPolicy, policy =>
     {
+        // Desarrollo local
         policy
             .WithOrigins(
                 "http://localhost:5173",
-                "http://127.0.0.1:5173"
+                "http://127.0.0.1:5173",
+                "http://localhost:3000",
+                "http://127.0.0.1:3000"
             )
+            // Producción - usar variables de entorno para URLs
+            .SetIsOriginAllowed(origin =>
+            {
+                if (origin.Contains("vercel.app") || origin.Contains("vsbti.vercel.app"))
+                    return true;
+                if (origin.Contains("localhost") || origin.Contains("127.0.0.1"))
+                    return true;
+                return false;
+            })
             .AllowAnyHeader()
-            .AllowAnyMethod();
+            .AllowAnyMethod()
+            .AllowCredentials();
     });
 });
 

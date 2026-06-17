@@ -1,0 +1,10 @@
+{
+  "buildCommand": "cd vsbti/frontend && npm install && npm run build",
+  "outputDirectory": "vsbti/frontend/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
