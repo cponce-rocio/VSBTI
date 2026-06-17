@@ -1,0 +1,166 @@
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(250, 246, 239, 0.7);
+  backdrop-filter: blur(10px);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.top-bar.is-scrolled {
+  background: rgba(250, 246, 239, 0.94);
+  box-shadow: 0 1px 0 var(--line);
+}
+
+.top-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+.brand-mark {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--terracotta-deep);
+  letter-spacing: 0.02em;
+}
+.brand-sub {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--earth-soft);
+}
+
+.plan-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--earth);
+  color: var(--linen);
+  border: none;
+  border-radius: 999px;
+  padding: 11px 20px 11px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.plan-toggle:hover { background: var(--terracotta-deep); transform: translateY(-1px); }
+
+.plan-toggle-icon {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 16px;
+}
+.plan-toggle-icon span {
+  display: block;
+  height: 2px;
+  background: var(--linen);
+  border-radius: 2px;
+}
+.plan-toggle-icon span:nth-child(2) { width: 70%; }
+
+.house-plan {
+  position: fixed;
+  top: 0;
+  right: -340px;
+  width: 320px;
+  height: 100vh;
+  background: var(--linen-warm);
+  border-left: 1px solid var(--line);
+  z-index: 150;
+  overflow-y: auto;
+  transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: -20px 0 60px rgba(43, 33, 24, 0.18);
+}
+.house-plan.is-open { right: 0; }
+
+.house-plan-inner {
+  padding: 100px 28px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.house-plan-title {
+  font-family: var(--font-display);
+  font-size: 19px;
+  color: var(--terracotta-deep);
+}
+
+.house-plan ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.room-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: var(--radius-soft);
+  transition: background 0.2s ease, padding-left 0.2s ease;
+}
+.room-link:hover { background: var(--sand); }
+.room-link.is-active {
+  background: var(--earth);
+}
+.room-link.is-active .room-label,
+.room-link.is-active .room-short {
+  color: var(--linen);
+}
+
+.room-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.room-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+.room-label {
+  font-weight: 600;
+  font-size: 14.5px;
+  color: var(--earth);
+}
+.room-short {
+  font-size: 12px;
+  color: var(--earth-soft);
+}
+
+.house-plan-note {
+  margin-top: 12px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-size: 12.5px;
+  color: var(--earth-soft);
+  line-height: 1.5;
+}
+
+.plan-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(43, 33, 24, 0.35);
+  border: none;
+  z-index: 140;
+  cursor: pointer;
+}
+
+@media (min-width: 1240px) {
+  .plan-toggle { padding-right: 22px; }
+}

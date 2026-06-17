@@ -1,0 +1,47 @@
+.newsletter-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.newsletter-copy p { font-size: 16.5px; line-height: 1.8; color: var(--earth-soft); margin-bottom: 24px; }
+
+.benefits-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px; }
+.benefits-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.benefits-list li span { font-size: 20px; }
+
+.newsletter-form-card {
+  background: var(--sand);
+  border-radius: var(--radius-room);
+  padding: 36px;
+}
+
+.newsletter-form { display: flex; flex-direction: column; gap: 12px; }
+.newsletter-form label {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--earth-soft);
+}
+.newsletter-form input {
+  padding: 14px 16px;
+  border-radius: var(--radius-soft);
+  border: 1px solid var(--line);
+  font-size: 15px;
+  background: var(--linen);
+  margin-bottom: 6px;
+}
+.newsletter-form input:focus { outline: none; border-color: var(--terracotta-deep); }
+.newsletter-disclaimer { font-size: 12.5px; color: var(--earth-soft); margin-top: 6px; }
+
+@media (max-width: 860px) {
+  .newsletter-grid { grid-template-columns: 1fr; }
+}

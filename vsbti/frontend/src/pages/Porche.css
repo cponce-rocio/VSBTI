@@ -1,0 +1,56 @@
+.porche-room { padding-bottom: clamp(80px, 12vw, 140px); }
+.porche-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 56px;
+  align-items: start;
+}
+.porche-copy p { font-size: 16.5px; line-height: 1.8; color: var(--earth-soft); margin-bottom: 30px; }
+
+.porche-contacts { display: flex; gap: 40px; }
+.porche-contact-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--terracotta-deep);
+  margin-bottom: 6px;
+}
+.porche-contact-value { font-size: 15px; font-weight: 600; }
+
+.porche-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: var(--sand);
+  border-radius: var(--radius-room);
+  padding: 36px;
+}
+.porche-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--earth-soft);
+}
+.porche-form input, .porche-form textarea {
+  font-family: var(--font-body);
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 15px;
+  padding: 12px 14px;
+  border-radius: var(--radius-soft);
+  border: 1px solid var(--line);
+  background: var(--linen);
+  resize: vertical;
+}
+.porche-form input:focus, .porche-form textarea:focus { outline: none; border-color: var(--terracotta-deep); }
+.porche-form button { align-self: flex-start; }
+
+@media (max-width: 860px) {
+  .porche-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,48 @@
+.house-art-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.house-art {
+  width: 100%;
+  display: block;
+}
+
+.house-art-door {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: var(--linen);
+  border: 1.5px solid var(--earth);
+  border-radius: 999px;
+  padding: 9px 16px;
+  font-size: 13.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 14px rgba(43, 33, 24, 0.08);
+}
+
+.house-art-door:hover {
+  background: var(--terracotta-deep);
+  color: var(--linen);
+  border-color: var(--terracotta-deep);
+  transform: translate(-50%, -50%) scale(1.08);
+  box-shadow: var(--shadow-soft);
+}
+
+@media (max-width: 720px) {
+  .house-art-door {
+    font-size: 11.5px;
+    padding: 7px 11px;
+  }
+}
+
+@media (max-width: 520px) {
+  .house-art-wrap { transform: scale(1); }
+  .house-art-door {
+    font-size: 10px;
+    padding: 5px 8px;
+  }
+}

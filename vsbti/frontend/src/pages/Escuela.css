@@ -1,0 +1,39 @@
+.escuela-intro-room { padding-top: 0; padding-bottom: 0; }
+.escuela-intro-grid { max-width: 700px; }
+.escuela-intro-grid p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(19px, 2.4vw, 22px);
+  color: var(--earth-soft);
+  line-height: 1.55;
+}
+
+.formatos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.formato-card {
+  background: var(--linen);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-room);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+}
+.formato-icon { font-size: 26px; display: block; margin-bottom: 14px; }
+.formato-card h3 { font-size: 18px; margin-bottom: 10px; }
+.formato-card p { font-size: 14px; color: var(--earth-soft); line-height: 1.6; margin-bottom: 20px; flex-grow: 1; }
+.formato-btn { align-self: flex-start; }
+
+.hotmart-room { }
+.hotmart-grid { max-width: 680px; }
+.hotmart-grid h2 { margin: 16px 0 18px; font-size: clamp(26px, 3.4vw, 34px); }
+.hotmart-grid p { font-size: 16px; line-height: 1.75; color: var(--earth-soft); margin-bottom: 28px; }
+
+@media (max-width: 980px) {
+  .formatos-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .formatos-grid { grid-template-columns: 1fr; }
+}

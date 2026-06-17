@@ -1,0 +1,81 @@
+.intro-method-room { padding-top: 4px; padding-bottom: 0; }
+.intro-method-text { max-width: 720px; }
+.intro-method-text p {
+  font-size: 16.5px;
+  line-height: 1.8;
+  color: var(--earth-soft);
+  margin-bottom: 16px;
+}
+
+.acronimo-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+.acronimo-card {
+  background: var(--linen);
+  border-radius: var(--radius-room);
+  padding: 26px 20px;
+  border: 1px solid var(--line);
+  text-align: left;
+}
+.acronimo-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--terracotta-deep);
+  color: var(--linen);
+  font-family: var(--font-display);
+  font-size: 19px;
+  margin-bottom: 16px;
+}
+.acronimo-card h3 { font-size: 16.5px; margin-bottom: 10px; }
+.acronimo-card p { font-size: 13px; color: var(--earth-soft); line-height: 1.55; }
+
+.pilares-path {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+  position: relative;
+}
+.pilar-step {
+  position: relative;
+  padding: 0 14px;
+  text-align: center;
+}
+.pilar-node {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--sand);
+  border: 2px solid var(--terracotta-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  font-size: 26px;
+}
+.pilar-step h3 { font-size: 18px; margin-bottom: 10px; }
+.pilar-step p { font-size: 13px; color: var(--earth-soft); line-height: 1.55; }
+.pilar-connector {
+  position: absolute;
+  top: 32px;
+  right: -12px;
+  width: 24px;
+  height: 1px;
+  background: var(--terracotta-deep);
+  opacity: 0.5;
+}
+
+.aplica-room { text-align: left; }
+.aplica-room h2 { margin: 10px 0 22px; font-size: clamp(26px, 3.6vw, 36px); max-width: 600px; }
+.aplica-text { font-size: 16.5px; line-height: 1.8; color: rgba(250, 246, 239, 0.88); max-width: 680px; }
+
+@media (max-width: 980px) {
+  .acronimo-grid { grid-template-columns: repeat(2, 1fr); }
+  .pilares-path { grid-template-columns: 1fr; gap: 28px; }
+  .pilar-connector { display: none; }
+}

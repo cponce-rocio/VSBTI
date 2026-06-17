@@ -1,0 +1,42 @@
+.journey-intro {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 30px);
+  font-style: italic;
+  color: var(--earth);
+  max-width: 720px;
+  margin-top: 14px;
+  margin-bottom: 36px;
+  line-height: 1.35;
+}
+
+.journey-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.journey-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--linen);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-soft);
+  padding: 18px 18px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.journey-link:hover {
+  transform: translateY(-3px);
+  border-color: var(--terracotta-deep);
+  box-shadow: var(--shadow-soft);
+}
+
+.journey-icon { font-size: 20px; }
+.journey-arrow {
+  margin-left: auto;
+  color: var(--terracotta-deep);
+  transition: transform 0.25s ease;
+}
+.journey-link:hover .journey-arrow { transform: translateX(4px); }

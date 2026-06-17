@@ -1,0 +1,77 @@
+.seeds-room { padding-top: 4px; }
+.seeds-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 48px;
+}
+.seeds-text p { font-size: 16.5px; line-height: 1.8; color: var(--earth-soft); margin-bottom: 16px; }
+
+.seeds-quotes {
+  background: var(--sand);
+  border-radius: var(--radius-room);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+}
+.seeds-quotes p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--terracotta-deep);
+}
+
+.featured-grid { display: flex; justify-content: center; }
+.featured-card {
+  background: var(--linen);
+  border-radius: var(--radius-room);
+  padding: 44px;
+  max-width: 560px;
+  text-align: center;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+.featured-card h2 { font-size: 30px; margin: 16px 0 10px; }
+.featured-sub { color: var(--earth-soft); font-size: 15.5px; margin-bottom: 22px; }
+.featured-list {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+.featured-list li {
+  font-size: 14.5px;
+  padding-left: 22px;
+  position: relative;
+}
+.featured-list li::before { content: '✔'; position: absolute; left: 0; color: var(--moss); }
+
+.shelves-room h2 { margin-top: 12px; }
+.shelves-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.shelf-card {
+  background: var(--linen);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-room);
+  padding: 28px 24px;
+}
+.shelf-icon { font-size: 26px; display: block; margin-bottom: 14px; }
+.shelf-card h3 { font-size: 18px; margin-bottom: 10px; }
+.shelf-card p { font-size: 14px; color: var(--earth-soft); line-height: 1.6; margin-bottom: 18px; }
+.shelf-btn { width: 100%; justify-content: center; }
+
+@media (max-width: 980px) {
+  .seeds-grid { grid-template-columns: 1fr; }
+  .shelves-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .shelves-grid { grid-template-columns: 1fr; }
+  .featured-card { padding: 32px 22px; }
+}

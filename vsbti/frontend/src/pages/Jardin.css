@@ -1,0 +1,84 @@
+.jardin-intro-room { padding-top: 0; padding-bottom: 0; }
+.jardin-intro-grid { max-width: 720px; }
+.jardin-intro-grid p { font-size: 16.5px; line-height: 1.8; color: var(--earth-soft); margin-bottom: 16px; }
+
+.areas-room h2 { margin-top: 12px; }
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.area-card {
+  background: var(--linen);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-room);
+  padding: 26px 22px;
+}
+.area-icon { font-size: 26px; display: block; margin-bottom: 14px; }
+.area-card h3 { font-size: 17px; margin-bottom: 10px; }
+.area-card p { font-size: 13.5px; color: var(--earth-soft); line-height: 1.6; }
+
+.form-room {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 56px;
+  align-items: start;
+}
+.form-grid .section-head { margin-bottom: 0; }
+
+.talent-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: var(--sand);
+  border-radius: var(--radius-room);
+  padding: 32px;
+}
+.talent-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--earth-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.talent-form input,
+.talent-form select,
+.talent-form textarea {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+  padding: 12px 14px;
+  border-radius: var(--radius-soft);
+  border: 1px solid var(--line);
+  background: var(--linen);
+  color: var(--earth);
+  resize: vertical;
+}
+.talent-form input:focus,
+.talent-form select:focus,
+.talent-form textarea:focus {
+  outline: none;
+  border-color: var(--moss);
+}
+.talent-form button { align-self: flex-start; margin-top: 4px; }
+
+.form-feedback { font-size: 14px; margin-top: 4px; }
+.form-feedback.is-ok { color: var(--moss-deep); }
+.form-feedback.is-error { color: var(--terracotta); }
+
+@media (max-width: 980px) {
+  .areas-grid { grid-template-columns: repeat(2, 1fr); }
+  .form-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .areas-grid { grid-template-columns: 1fr; }
+}

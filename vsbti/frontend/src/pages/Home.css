@@ -1,0 +1,135 @@
+.hero-room {
+  padding-top: clamp(140px, 18vw, 200px);
+  background: radial-gradient(ellipse 90% 60% at 50% 0%, var(--linen-warm) 0%, var(--linen) 70%);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(32px, 6vw, 80px);
+  align-items: center;
+}
+
+.hero-copy h1 {
+  font-size: clamp(40px, 6vw, 64px);
+  margin-top: 14px;
+  margin-bottom: 22px;
+}
+.hero-copy h1 em {
+  font-style: italic;
+  color: var(--terracotta-deep);
+}
+
+.hero-sub {
+  font-size: clamp(17px, 2vw, 19px);
+  color: var(--earth-soft);
+  max-width: 480px;
+  margin-bottom: 22px;
+  font-weight: 500;
+}
+
+.hero-body {
+  font-size: 15.5px;
+  color: var(--earth-soft);
+  max-width: 480px;
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.hero-art { text-align: center; }
+.hero-art-caption {
+  margin-top: 18px;
+  font-size: 13px;
+  color: var(--earth-soft);
+  font-style: italic;
+}
+
+.philosophy-room h2 { margin-top: 12px; margin-bottom: 44px; max-width: 600px; }
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.philosophy-card {
+  background: var(--linen);
+  border-radius: var(--radius-room);
+  padding: 30px 24px;
+  border: 1px solid var(--line);
+}
+.philosophy-icon { font-size: 30px; display: block; margin-bottom: 14px; }
+.philosophy-card h3 { font-size: 21px; margin-bottom: 10px; }
+.philosophy-card p { font-size: 14.5px; color: var(--earth-soft); line-height: 1.6; }
+
+.intro-room { padding-top: clamp(56px, 8vw, 96px); }
+.intro-grid { max-width: 760px; }
+.intro-room h2 {
+  font-size: clamp(28px, 4vw, 38px);
+  margin: 14px 0 22px;
+}
+.intro-text {
+  font-size: 16.5px;
+  color: var(--earth-soft);
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+.link-arrow {
+  font-weight: 700;
+  color: var(--terracotta-deep);
+  display: inline-flex;
+  transition: gap 0.2s ease;
+}
+.link-arrow:hover { text-decoration: underline; }
+
+.highlights-room h2 { margin-top: 12px; margin-bottom: 44px; max-width: 560px; }
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.highlight-card {
+  display: block;
+  background: var(--linen);
+  border-radius: var(--radius-room);
+  padding: 28px 22px;
+  border: 1px solid var(--line);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.highlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-soft);
+  border-color: var(--terracotta-deep);
+}
+.highlight-icon { font-size: 28px; display: block; margin-bottom: 14px; }
+.highlight-card h3 { font-size: 18px; margin-bottom: 8px; }
+.highlight-card p { font-size: 13.5px; color: var(--earth-soft); line-height: 1.55; }
+.highlight-arrow {
+  position: absolute;
+  top: 26px;
+  right: 22px;
+  color: var(--terracotta-deep);
+  font-weight: 700;
+}
+
+@media (max-width: 980px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-art { order: -1; }
+  .philosophy-grid { grid-template-columns: repeat(2, 1fr); }
+  .highlights-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .philosophy-grid { grid-template-columns: 1fr; }
+  .highlights-grid { grid-template-columns: 1fr; }
+}
